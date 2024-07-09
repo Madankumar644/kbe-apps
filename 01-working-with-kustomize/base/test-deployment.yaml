@@ -20,6 +20,6 @@ spec:
       - image: quay.io/redhatworkshops/welcome-php
         name: welcome-php
         resources: {}
-      - image: docker.io/library/hello-world:latest
-        name: hello-world
+      - image: docker.io/library/registry:latest
+        name: registry
         resources: {}

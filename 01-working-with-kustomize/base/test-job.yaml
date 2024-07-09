@@ -1,13 +1,16 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: test-post-sync
+  name: after
   annotations:
     argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
     spec:
       containers:
-      - image: docker/whalesay:latest
-        command: [cowsay]
-        args: ["hello world"]
+      - name: sleep
+        image: alpine:latest
+        command: ["sleep", "10"]
+      restartPolicy: Never
+  backoffLimit: 0

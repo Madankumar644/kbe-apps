@@ -20,6 +20,3 @@ spec:
       - image: quay.io/redhatworkshops/welcome-php
         name: welcome-php
         resources: {}
-      - image: quay.io/redhatworkshops/welcome-app
-        name: welcome-app
-        resources: {}
